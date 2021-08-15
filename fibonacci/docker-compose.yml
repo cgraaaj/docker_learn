@@ -36,8 +36,8 @@ services:
       dockerfile: Dockerfile.dev
       context: ./client
     volumes:
-      - /home/app/node_modules
-      - ./client:/home/app
+      - /home/node/app/node_modules
+      - ./client:/home/node/app
   worker:
     build:
       dockerfile: Dockerfile.dev
