@@ -1,0 +1,9 @@
+access minikube dashboard in mac
+https://stackoverflow.com/questions/47173463/how-to-access-local-kubernetes-minikube-dashboard-remotely
+kubectl proxy --address='0.0.0.0' --disable-filter=true
+http://192.168.1.76:8001/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=default
+
+access pod app in mac
+https://minikube.sigs.k8s.io/docs/start/
+pod port forward to localhost(cgr)
+kubectl port-forward service/client-node-port 31515(external):3050(pod port)
